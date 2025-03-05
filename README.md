@@ -70,8 +70,6 @@ You'll be asked about these options during generation:
 - [ ] Permissions
 - [ ] Views
 
-![Command Demo](https://via.placeholder.com/800x400.png?text=CRUD+Generator+Demo)
-
 ## 📂 Generated Structure
 
 ```
