@@ -1,0 +1,48 @@
+<?php
+
+namespace $CLASS_NAMESPACE$;
+
+use Modules\Base\Http\Controllers\BaseCrudController;
+use Illuminate\Http\Request;
+use $MODEL_NAMESPACE$;
+use Modules\$MODULE$\Http\Services\$SERVICE_NAME$;
+use Modules\$MODULE$\Enums\permissions\$PERMISSION_NAME$;
+use Modules\$MODULE$\Http\Requests\$CREATE_REQUEST_NAME$;
+
+class $CLASS$ extends BaseCrudController
+{
+    protected $model;
+
+    protected $crudService;
+
+    protected $module           = '$MODULE_LOWER$';
+
+    protected $routePrefix      = '$ROUTE_PREFIX$';
+
+    protected $routeParameters  = [];
+
+    protected $createRequest    = $CREATE_REQUEST$;
+
+    protected $updateRequest    = $CREATE_REQUEST$;
+
+    protected static $permissionClass  = $PERMISSION$;
+
+    protected static $hasPermission    = $HAS_PERMISSION$;
+
+    protected $hasSoftDelete    = $HAS_SOFT_DELETE$;
+
+    protected $hasDisabled      = $HAS_DISABLED$;
+
+    protected $hasBulkActions   = true;
+
+    public function __construct($MODEL$ $model, $SERVICE$ $crudService)
+    {
+        app('adminHelper')->addBreadcrumbs(trans('admin::dashboard.aside_menu.$MODEL_SNAKE$_management.$MODEL_PLUR$'), route($this->routePrefix . '.index'));
+
+        $this->model        = $model;
+        $this->crudService  = $crudService;
+
+        parent::__construct();
+    }
+
+}

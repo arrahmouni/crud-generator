@@ -1,0 +1,16 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Modules\Base\Models\BaseModel;
+
+class $CLASS$ extends BaseModel
+{
+    protected $fillable = [
+        '$FOREIGN_KEY$',
+        'locale',
+    ];
+
+    public $timestamps = false;
+
+}

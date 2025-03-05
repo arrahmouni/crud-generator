@@ -1,0 +1,18 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Modules\Base\Resources\BaseJsonResource;
+
+class $CLASS$ extends BaseJsonResource
+{
+    /**
+     * Transform the resource into an array.
+     */
+    public function toArray($request): array
+    {
+        return [
+
+        ];
+    }
+}

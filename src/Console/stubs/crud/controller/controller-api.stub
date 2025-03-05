@@ -1,0 +1,44 @@
+<?php
+
+namespace $CLASS_NAMESPACE$;
+
+use Modules\Base\Http\Controllers\BaseApiController;
+use Illuminate\Http\Request;
+use $MODEL_NAMESPACE$;
+use Modules\$MODULE$\Http\Services\$SERVICE_NAME$;
+use Modules\$MODULE$\Http\Requests\$CREATE_REQUEST_NAME$;
+use Modules\$MODULE$\Resources\$MODEL_RESOURCE_NAME$;
+
+
+class $CLASS$ extends BaseApiController
+{
+    protected $model;
+
+    protected $modelService;
+
+    protected $modelResource = $MODEL_RESOURCE$;
+
+    protected $modelRequest = $CREATE_REQUEST$;
+
+    public function __construct($MODEL$ $model, $SERVICE$ $modelService)
+    {
+        $this->model        = $model;
+        $this->modelService = $modelService;
+
+        parent::__construct();
+    }
+
+    public function mergeDataToRequestForCollection(Request $request)
+    {
+        $request->merge([
+
+        ]);
+    }
+
+    public function mergeDataToRequest(Request $request)
+    {
+        $request->merge([
+            'id'      => $request->id,
+        ]);
+    }
+}

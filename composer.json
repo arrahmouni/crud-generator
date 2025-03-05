@@ -1,0 +1,33 @@
+{
+    "name": "arrahmouni/crud-generator",
+    "description": "Generate crud for laravel modules",
+    "license": "MIT",
+    "type": "library",
+    "keywords": ["laravel", "crud", "generator", "ar-rahmouni", "modules"],
+    "autoload": {
+        "psr-4": {
+            "ArRahmouni\\CrudGenerator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AMMAR RAHMOUNI",
+            "email": "ammarrahmouni8@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^10.0",
+        "laravel/framework": "^10.0",
+        "nwidart/laravel-modules": "^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ArRahmouni\\CrudGenerator\\CrudGeneratorServiceProvider"
+            ]
+        }
+    }
+}
