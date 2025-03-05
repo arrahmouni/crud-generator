@@ -123,7 +123,7 @@ The `CrudGeneratorServiceProvider` handles:
 
 ## 📜 License
 
-This package is open-source software licensed under the [MIT license](LICENSE).
+This package is open-source software licensed under the [MIT license](LICENSE.md).
 
 ## 🤝 Contributing
 
