@@ -19,7 +19,6 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^8.0",
-        "illuminate/support": "^10.0",
         "laravel/framework": "^10.0",
         "nwidart/laravel-modules": "^10.0"
     },
