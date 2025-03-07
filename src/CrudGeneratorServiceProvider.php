@@ -5,6 +5,7 @@ namespace ArRahmouni\CrudGenerator;
 use Illuminate\Support\ServiceProvider;
 use ArRahmouni\CrudGenerator\Classes\Stub;
 use Illuminate\Support\Str;
+
 class CrudGeneratorServiceProvider extends ServiceProvider
 {
     /**
