@@ -51,6 +51,8 @@ class CreateCrudCommand extends GeneratorCommand
 
     protected $shouldCreateApiController ;
 
+    protected $isPaginate ;
+
     protected $shouldCreatePermissions ;
 
     protected $shouldCreateView ;
@@ -79,6 +81,9 @@ class CreateCrudCommand extends GeneratorCommand
         $this->shouldCreateRequest      = $this->confirm('Would you like to create a request for the model?', true);
         $this->shouldCreateController   = $this->confirm('Would you like to create a controller for the model?', true);
         $this->shouldCreateApiController= $this->confirm('Would you like to create an api controller for the model?', true);
+        if($this->shouldCreateApiController) {
+            $this->isPaginate = $this->confirm('Would you like to paginate the api controller?', true);
+        }
         $this->shouldCreatePermissions  = $this->confirm('Would you like to create permissions for the model?', true);
         $this->shouldCreateView         = $this->confirm('Would you like to create views for the model?', true);
 
@@ -426,6 +431,7 @@ class CreateCrudCommand extends GeneratorCommand
             'resource'          => $resourceName,
             'request'           => $this->shouldCreateRequest ? "{$this->getModelName()}Request" : 'Request',
             'module'            => $this->argument('module'),
+            'isPaginate'        => $this->isPaginate,
         ]));
     }
 

@@ -20,6 +20,8 @@ class $CLASS$ extends BaseApiController
 
     protected $modelRequest = $CREATE_REQUEST$;
 
+    protected $isPaginate = $IS_PAGINATE$;
+
     public function __construct($MODEL$ $model, $SERVICE$ $modelService)
     {
         $this->model        = $model;
