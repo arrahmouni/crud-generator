@@ -47,6 +47,7 @@ class CreateApiControllerCommand extends GeneratorCommand
             ['resource'         , InputArgument::REQUIRED, 'The name of resource will be used.'],
             ['request'          , InputArgument::REQUIRED, 'The name of request will be used.'],
             ['module'           , InputArgument::OPTIONAL, 'The name of module will be used.'],
+            ['isPaginate'       , InputArgument::OPTIONAL, 'The name of module will be used.'],
         ];
     }
 
@@ -84,6 +85,7 @@ class CreateApiControllerCommand extends GeneratorCommand
             'SERVICE'               => $this->argument('service'),
             'CREATE_REQUEST'        => $this->argument('request') . '::class',
             'CREATE_REQUEST_NAME'   => $this->argument('request'),
+            'IS_PAGINATE'           => $this->argument('isPaginate') == true ? 'true' : 'false',
 
         ]))->render();
     }
