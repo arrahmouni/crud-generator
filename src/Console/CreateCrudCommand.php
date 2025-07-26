@@ -296,12 +296,12 @@ class CreateCrudCommand extends GeneratorCommand
 
         $pattern = '/(\'models\'\s*=>\s*\[\s*\n)/';
 
-        $newModel = [
-            'name' => Str::lower(Str::snake($this->getModelName())),
-            'icon' => 'fas fa-folder',
-        ];
+        $modelKey = Str::lower(Str::snake($this->getModelName()));
 
-        $newCode = "        [\n            'name' => '" . $newModel['name'] . "',\n            'icon' => '" . $newModel['icon'] . "',\n        ],\n";
+        $newCode = "        '{$modelKey}' => [\n"
+                . "            'name' => '{$modelKey}',\n"
+                . "            'icon' => 'fas fa-folder',\n"
+                . "        ],\n";
 
         $updatedContent = preg_replace($pattern, "$1$newCode", $configContent);
 
